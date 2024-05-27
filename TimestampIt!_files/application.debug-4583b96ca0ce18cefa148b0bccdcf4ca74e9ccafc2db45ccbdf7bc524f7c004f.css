@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body { @apply font-mono }
+  /* pre { @apply text-wrap } */
+  a { @apply text-blue-600 hover:text-blue-900 }
+  h1 { @apply text-6xl  }
+  h2 { @apply text-4xl }
+  h3 { @apply text-3xl }
+  h4 { @apply text-2xl }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/*# sourceMappingURL=application.css-542130ffea42f8c8feb93306011181c9eb8e782d56c14dc989e30c2bb133f661.map */
