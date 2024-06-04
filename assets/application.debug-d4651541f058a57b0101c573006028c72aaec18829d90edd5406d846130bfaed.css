@@ -6,10 +6,13 @@
   body { @apply font-mono }
   /* pre { @apply text-wrap } */
   a { @apply text-blue-600 hover:text-blue-900 }
-  h1 { @apply text-6xl  }
-  h2 { @apply text-4xl }
-  h3 { @apply text-3xl }
-  h4 { @apply text-2xl }
+  h1 { @apply text-6xl mt-8 mb-4 }
+  h2 { @apply text-4xl mt-6 mb-3 }
+  h3 { @apply text-3xl mt-4 mb-2 }
+  h4 { @apply text-2xl mt-2 mb-1 }
+  p { @apply mt-2 mb-2 }
+  code { @apply m-4 bg-zinc-400 rounded p-2 }
+
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -27,4 +30,4 @@
 
  */
 
-/*# sourceMappingURL=application.css-542130ffea42f8c8feb93306011181c9eb8e782d56c14dc989e30c2bb133f661.map */
+/*# sourceMappingURL=application.css-486b0474ef45edd4f278da4a37033931bcefb9f32f63fe676a0edb76d99c533f.map */
