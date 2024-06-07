@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<!-- saved from url=(0033)http://127.0.0.1:3000/white_paper -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.turbo-progress-bar {
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">.turbo-progress-bar {
   position: fixed;
   display: block;
   top: 0;
@@ -13,31 +15,18 @@
     opacity 150ms 150ms ease-in;
   transform: translate3d(0, 0, 0);
 }
-</style><title>TimestampIt!</title><meta content="width=device-width,initial-scale=1" name="viewport"><meta name="csrf-param" content="authenticity_token">
-<link rel="stylesheet" href="./assets/application.debug-d4651541f058a57b0101c573006028c72aaec18829d90edd5406d846130bfaed.css" data-turbo-track="reload"><script type="importmap" data-turbo-track="reload">{
-  "imports": {
-    "application": "/assets/application-37f365cbecf1fa2810a8303f4b6571676fa1f9c56c248528bc14ddb857531b95.js",
-    "@hotwired/turbo-rails": "/assets/turbo.min-918a6cf2f2be8ed9555c9a11eee69c7dc2f01770802815576efc931876b327fb.js",
-    "@hotwired/stimulus": "/assets/stimulus.min-dd364f16ec9504dfb72672295637a1c8838773b01c0b441bd41008124c407894.js",
-    "@hotwired/stimulus-loading": "/assets/stimulus-loading-3576ce92b149ad5d6959438c6f291e2426c86df3b874c525b30faad51b0d96b3.js",
-    "stimulus-use": "/assets/stimulus-use-5ce13a71e738ce2e87c32fcde8ce0a485c3a47d09b5c40f537862c664c692bb7.js",
-    "controllers/application": "/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js",
-    "controllers/dropdown_controller": "/assets/controllers/dropdown_controller-6e471241f6a1afd74111ad20a22272c5ca854250af232b476e8b51de062364c1.js",
-    "controllers/file_hasher_controller": "/assets/controllers/file_hasher_controller-000462c8e8443e5387aa5e8c9e128cfc445e962da106c7360c43c66662a67cab.js",
-    "controllers": "/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js"
-  }
-}</script>
-<script type="module">import "application"</script>
-<link rel="stylesheet" href="./assets/tailwind.debug-6776b5ca4b0e0d988422ccf58df3f70d90c7ef3f1147340e17623a3c89f9f1be.css">
-<link rel="icon" type="image/x-icon" href="http://127.0.0.1:3000/assets/favicon-29358c1df43b865781b7462668869bce4b4c1b344dc0c717da6b58a52e95b94c.ico">
+</style>
+<title>TimestampIt!</title>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+
+<link rel="stylesheet" href="./assets/2301cfad60b19e356aadffb2898cb82008b10cdf38ad30d53a321138a670e3b0.css">
+<link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
 </head>
-<body class="bg-zinc-500 py-8 px-16">
-  <h1>TimestampIt!</h1>
 
+<body class="py-8 px-16">
+<h1>TimestampIt!</h1>
 <p>TimestampIt! is a web site and web service that will operate at <a href="http://www.timestampit.com/">http://www.timestampit.com</a>.</p>
-
 <p>TimestampIt! is a "Trusted Third Party" that offers Trusted Timestamps to the public through a simple HTTP API. The basic service will be offered for free to registered users. Users may opt to pay for additional features including long term storage of Trusted Timestamps or advanced delivery.</p>
-
 <h2>Trusted Timestamps</h2>
 
 <p>Trusted Timestamps have been around for a long time. Various standards and forms of Trusted Timestamp exist. The most predominant standard is <a href="https://www.ietf.org/rfc/rfc3161.txt">RFC3161</a> for trusted timestamps. In the terminology of RFC3161, TimestampIt! is a "Time Stamping Authority" or "TSA".</p>
@@ -46,11 +35,11 @@
 - <strong>The data is timestamped.</strong> At any point in the future, anyone with the data can use the TT to verify with certainty when the data was first timestamped.<br>
 - <strong>The data is made immutable.</strong> Again, anyone with the data can use the TT to verify the data has not been altered since it was first timestamped.</p>
 
-<h3>Non-repudiation</h3>
+<p>Together these properties combine to form <strong>"Proof of Existence"</strong> for digital data.</p>
 
-<p>Data that is protected by a Trusted Timestamp can not be altered, and no one can legitimately assert that the data was created post-hoc meaning after the date of timestamp. Trusted timestamps are <strong>proof-of-existence</strong>. When crafted correctly, a Trusted Timestamp can not be repudiated.</p>
+<h3>Non-repudiation of existence</h3>
 
-<p>In their best form they should serve as legal evidence of existence although the extent that this kind of cryptography can apply legally is largely untested and unknown.</p>
+<p>Data that is protected by a Trusted Timestamp can not be altered, and no one can legitimately assert that the data was created after the date of timestamp. When crafted correctly, a Trusted Timestamp can not be repudiated thus assuring the authenticity of the underlying data for all time into the future.</p>
 
 <p>Trusted Timestamps could be composed together with other kinds of non-repudiation services to extend the concept of non-repudiation to proof-of-creation, proof-of-possession or other concepts.</p>
 
@@ -71,16 +60,15 @@
 
 <p>Creation can only be performed by a trusted third party using a trusted clock that is guaranteed in sync with a standardized clock like Greenwich Mean Time. This is this primary role of TimestampIt! and other timestamping services.</p>
 
-<p>Verification however can be performed at any time in the future by any party with the Trusted Timestamp. TimestampIt! is not involved in the process of verification, it only requires the certificate from TimestampIt!. Because of this, any Trusted Timestamp created by TimestampIt! is still verifiable even it TimestampIt! should cease to exist. Public backups of the certificates for TimestampIt! is the only thing needed for verification to work in perpetuity.</p>
+<p>Verification however can be performed at any time in the future by any party with the Trusted Timestamp. TimestampIt! is not involved in the process of verification, it only requires the certificate from TimestampIt!. Because of this, any Trusted Timestamp created by TimestampIt! is still verifiable even if TimestampIt! should cease to exist. Public backups of the certificates for TimestampIt! is the only thing needed for verification to work in perpetuity.</p>
 
 <h3>Creating Trusted Timestamps</h3>
 
-<p>A Trusted Timestamp can only be "trusted" if it is created</p>
-
 <p>Starting with a file or some data, the process for obtaining a Trusted Timestamp is generally as follows:<br>
 - <strong>"Hash" the file using SHA-256 or another common hashing algorithm.</strong> This will produce an output known as a hash digest. This can be thought of as a "fingerprint" for the file. The same file will always produce the same hash digest, but if the file is altered in any way large or small, a completely different hash digest will be produced.<br>
-- <strong>Request a Trusted Timestamp from TimestampIt! by passing the hash digest to the TimestampIt! API.</strong><br>
-- <strong>Store the returned Trusted Timestamp.</strong></p>
+- <strong>User requests a Trusted Timestamp from TimestampIt! by passing the hash digest to the TimestampIt! API.</strong><br>
+- <strong>TimestampIt! creates the Trusted Timestamp and returns it to the user.</strong><br>
+- <strong>User store the returned Trusted Timestamp.</strong></p>
 
 <p>The exact method of creating a trusted timestamp varies depending on which standard is being used.</p>
 
@@ -108,12 +96,12 @@
 
 <p>First, construct a RFC3161 binary request file. A good way to do this is using openssl:</p>
 
-<pre><code class="prettyprint">openssl ts -query -data my_important_data.txt -sha256 -out request_file.tsq
+<pre><code class="prettyprint">$ openssl ts -query -data my_important_data.txt -sha256 -out request_file.tsq
 </code></pre>
 
 <p>Second, request the Trusted Timestamp from timestampit.com:</p>
 
-<pre><code class="prettyprint">curl -u your_username -H "Content-Type: application/timestamp-query" --data-binary request_file.tsq https://timestampit.com/create &gt; response_file.tsr
+<pre><code class="prettyprint">$ curl -u your_username -H "Content-Type: application/timestamp-query" --data-binary request_file.tsq https://timestampit.com/create &gt; response_file.tsr
 </code></pre>
 
 <h3>Verifying Trusted Timestamps</h3>
@@ -128,25 +116,33 @@
 
 <p>Trusted timestamps also offer some extensibility that allows including additional data for application specific verifications.</p>
 
+<h2>Simplifying Cryptography for wide application</h2>
+
+<p>A primary goal of TimestampIt! is to offer a streamlined and simplified approach to timestamping that does not require users to learn details of cryptographic signature schemes and certificate management. Current offerings based on RFC3161 offer a very complete and extensible protocol but do so at the expense of requiring users to have some proficiency in the underlying concepts.</p>
+
+<p>Users should be able to trust that TimestampIt! has chosen the best signature scheme for a trusted timestamp and additionally that signing keys and certificates have been generated and stored using all best practices available. Users are free to simply create trusted timestamps using a minimal API and learn the details as they go from there.</p>
+
 <h2>Certificates and keys</h2>
 
 <p>A crucial component in making Trusted Timestamps "trusted" is for TimestampIt! to have exceptional key and certificate management practices. Having a transparent, automated and auditable process for key and certificate management will be a key differentiating factor for TimestampIt!.</p>
 
-<p>Certificates must be fully verified back to a reputable Certificate Authority (CA).</p>
+<p>Certificates must be fully verified back to a reputable Certificate Authority (CA). Where practical, TimestampIt and its certificates should interoperate with existing public key infrastructure (PKI).</p>
 
-<p>Public Ceritifcates for TimestampIt! should be available from multiple locations, including a lifetime backup in GitHub or online hosting providers.</p>
+<p>Public Certifcates for TimestampIt! should be available from multiple locations, including a lifetime backup in GitHub or online hosting providers. In this way Trusted Timestamps created by TimestampIt! can be verified long after TimestampIt! no longer exists.</p>
 
-<p>Ceritificates may be "chained" where an old key signs a new key being rotated in, thereby establishing a chain of provenance and trust.</p>
+<p>Certificates may be "chained" where an old key signs a new key being rotated in, thereby establishing a chain of provenance and trust.</p>
 
-<h3>ED25519</h3>
+<h3>ED25519 signatures</h3>
 
-<p>The best choice for digital signature algorithm appears to be ED25519 at this time (2024). This algorithm is widely implemented and considered best in class.</p>
+<p>TimestampIt will use the ED25519 digital signature algorithm for the initial versions of the product. The specific signature scheme/algorithm can be updated or replaced over time as newer signature technologies and standards emerge. In order to keep the product simple, TimestampIt! will generally only offer a single signature scheme at a time.</p>
 
-<p>Public keys are relatively short for the level of security they provide, although signature strings are a bit long which does add to storage burden.</p>
+<p>RSA signatures are also a viable alternative to ED25519. ED25519 was chosen because it has shorter public keys (comparing to RSA 2048) and has greater resistance to bad random number generators.</p>
+
+<p>In practice both RSA and ED25519 are perfectly suitable for the job so it is simply a matter of picking one to start with. ED25519 it is!</p>
 
 <h2>TimestampIt! is for profit</h2>
 
-<p>All users of TimestampIt! will be required to create a user account in order to use the API and create trusted timestamps. This allows timestampit to protect the API and maintain a high level of service for customers using the service in good faith.</p>
+<p>All users of TimestampIt! will be required to create a user account in order to use the API and create trusted timestamps. This allows TimestampIt to protect the API and maintain a high level of service for customers using the service in good faith.</p>
 
 <p>An email address is not required to create an account. TimestampIt! will not sell user data ever and is setup to allow for anonymous usage.</p>
 
@@ -173,4 +169,5 @@
 <li>Trusted Timestamping: <a href="https://en.wikipedia.org/wiki/Trusted_timestamping">https://en.wikipedia.org/wiki/Trusted_timestamping</a></li>
 <li>Hal Finney and Satoshi discuss "Secure Timestamping" on Bitcoin: <a href="https://www.bitcoin.com/satoshi-archive/emails/bitcoin-list/9/">https://www.bitcoin.com/satoshi-archive/emails/bitcoin-list/9/</a></li>
 </ul>
-</body></html>
+</body>
+</html>
